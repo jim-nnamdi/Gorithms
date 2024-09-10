@@ -23,7 +23,7 @@ public:
             TreeNode* node = q.front().first;
             int depth = q.front().second;
             q.pop();
-            if(node->left == nullptr || node->right == nullptr) 
+            if(node->left == nullptr && node->right == nullptr) 
                 return depth;
             if(node->left != nullptr)
                 q.push({node->left, depth +=1});
